@@ -22,12 +22,13 @@ public class Game extends Canvas implements Runnable
 		MENU,
 		GAME
 	}
-	private STATE state = STATE.MENU;
+	private STATE state0 = STATE.MENU;
+	private STATE state1 = STATE.GAME;
 	
 
 	public void init()
 	{
-			
+		
 	}
 	
 	public synchronized void start()
@@ -73,7 +74,7 @@ public class Game extends Canvas implements Runnable
 	
 	public void tick()
 	{
-		if(state == STATE.GAME)
+		if(state0 == STATE.GAME)
 		{
 			
 		}
@@ -91,7 +92,7 @@ public class Game extends Canvas implements Runnable
 		
 		//RENDER HERE
 		g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
-		if(state == STATE.GAME)
+		if(state0 == STATE.GAME)
 		{
 			
 		}
