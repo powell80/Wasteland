@@ -1,13 +1,10 @@
 package main;
 
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 public class Game extends Canvas implements Runnable
 {
@@ -19,6 +16,14 @@ public class Game extends Canvas implements Runnable
 	public static int dialogBool=0;
 	public Thread gameThread;
 	public static  JFrame frame;
+	
+	private enum STATE
+	{
+		MENU,
+		GAME
+	}
+	private STATE state = STATE.MENU;
+	
 
 	public void init()
 	{
@@ -68,7 +73,10 @@ public class Game extends Canvas implements Runnable
 	
 	public void tick()
 	{
-		
+		if(state == STATE.GAME)
+		{
+			
+		}
 	}
 	
 	public void render()
@@ -83,6 +91,10 @@ public class Game extends Canvas implements Runnable
 		
 		//RENDER HERE
 		g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
+		if(state == STATE.GAME)
+		{
+			
+		}
 		
 		//END RENDER
 		bs.show();
