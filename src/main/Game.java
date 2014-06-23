@@ -1,8 +1,13 @@
 package main;
 
 import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Game extends Canvas implements Runnable
 {
@@ -68,15 +73,35 @@ public class Game extends Canvas implements Runnable
 	
 	public void render()
 	{
+		BufferStrategy bs = this.getBufferStrategy();
+		if(bs == null)
+		{
+			createBufferStrategy(3);
+			return;
+		}
+		Graphics g = bs.getDrawGraphics();
+		//RENDER HERE
+		g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 		
+		//END RENDER
+		bs.show();
+		g.dispose();
 	}
 
-	
 
 	public static void main(String[] args) 
 	{
 		Game game = new Game();
-
+		game.setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
+		game.setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
+		game.setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
+		frame = new JFrame("Realm Jumper");
+		frame.setBounds(400, 100, WIDTH * SCALE, HEIGHT * SCALE);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.add(game);
+		frame.setVisible(true);
+		game.start();
 	}
 }
 
