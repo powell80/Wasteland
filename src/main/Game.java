@@ -11,23 +11,24 @@ public class Game extends Canvas implements Runnable
 	private static final long serialVersionUID = 1L;
 	public static final int WIDTH = 512, HEIGHT = 384, SCALE = 2;
 	public static boolean running = false;
-	public static boolean ladyDialog = false;
-	public static boolean ladyDialog2 = false;
 	public static int dialogBool=0;
 	public Thread gameThread;
 	public static  JFrame frame;
+	public Menu menu;
 	
-	private enum STATE
+	public static enum STATE
 	{
 		MENU,
 		GAME
-	}
-	private STATE state = STATE.MENU;
+	};
+	
+	public static STATE state = STATE.MENU;
 	
 
 	public void init()
 	{
-		
+		menu = new Menu();
+		this.addMouseListener(new mouseInput());
 	}
 	
 	public synchronized void start()
@@ -75,7 +76,7 @@ public class Game extends Canvas implements Runnable
 	{
 		if(state == STATE.MENU)
 		{
-			
+			menu.tick();
 		}
 		else if(state == STATE.GAME)
 		{
@@ -97,7 +98,7 @@ public class Game extends Canvas implements Runnable
 		g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 		if(state == STATE.MENU)
 		{
-			
+			menu.render(g);
 		}
 		else if(state == STATE.GAME)
 		{
@@ -116,7 +117,7 @@ public class Game extends Canvas implements Runnable
 		game.setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 		game.setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 		game.setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
-		frame = new JFrame("Realm Jumper");
+		frame = new JFrame("Wasteland");
 		frame.setBounds(400, 100, WIDTH * SCALE, HEIGHT * SCALE);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
