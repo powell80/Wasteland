@@ -15,6 +15,7 @@ public class Game extends Canvas implements Runnable
 	public Thread gameThread;
 	public static  JFrame frame;
 	public Menu menu;
+	public Menu menu1;
 	
 	public static enum STATE
 	{
