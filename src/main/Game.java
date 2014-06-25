@@ -16,6 +16,7 @@ public class Game extends Canvas implements Runnable
 	public static  JFrame frame;
 	public Menu menu;
 	public Menu menu1;
+	public Menu menu2;
 	
 	public static enum STATE
 	{
@@ -29,6 +30,8 @@ public class Game extends Canvas implements Runnable
 	public void init()
 	{
 		menu = new Menu();
+		menu1 = new Menu();
+		menu2 = new Menu();
 		this.addMouseListener(new mouseInput());
 	}
 	
