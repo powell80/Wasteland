@@ -28,7 +28,7 @@ public class Game extends Canvas implements Runnable
 	public void init()
 	{
 		menu = new Menu();
-		//this.addMouseListener(new mouseInput());
+		this.addMouseListener(new mouseInput());
 	}
 	
 	public synchronized void start()

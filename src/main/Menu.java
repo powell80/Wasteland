@@ -34,21 +34,21 @@ public class Menu
 		g.setFont(fnt1);
 		
 		g2d.draw(button0);
-		g.drawString("button0", button0.x + 25, button0.y + 42);
+		g.drawString("button0", button0.x + 25, button0.y + 35);
 		
 		g2d.draw(button1);
-		g.drawString("button1", button1.x + 25, button1.y + 42);
+		g.drawString("button1", button1.x + 25, button1.y + 35);
 		
 		g2d.draw(button2);
-		g.drawString("button2", button2.x + 25, button2.y + 42);
+		g.drawString("button2", button2.x + 25, button2.y + 35);
 		
 		g2d.draw(button3);
-		g.drawString("button3", button3.x + 25, button3.y + 42);
+		g.drawString("button3", button3.x + 25, button3.y + 35);
 		
 		g2d.draw(button4);
-		g.drawString("button4", button4.x + 25, button4.y + 42);
+		g.drawString("button4", button4.x + 25, button4.y + 35);
 		
 		g2d.draw(button5);
-		g.drawString("button5", button4.x + 25, button5.y + 42);
+		g.drawString("Quit", button4.x + 65, button5.y + 35);
 	}
 }
