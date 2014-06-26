@@ -4,7 +4,10 @@ import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+
 import javax.swing.JFrame;
+
+import menuPack.MainMenu;
 
 public class Game extends Canvas implements Runnable
 {
@@ -14,9 +17,10 @@ public class Game extends Canvas implements Runnable
 	public static int dialogBool=0;
 	public Thread gameThread;
 	public static  JFrame frame;
-	public Menu menu;
-	public Menu menu1;
-	public Menu menu2;
+	public CurrentMenu currMenu;
+	public MainMenu menu;
+	public MainMenu menu1;
+	public MainMenu menu2;
 	
 	public static enum STATE
 	{
@@ -29,9 +33,9 @@ public class Game extends Canvas implements Runnable
 
 	public void init()
 	{
-		menu = new Menu();
-		menu1 = new Menu();
-		menu2 = new Menu();
+		menu = new MainMenu();
+		menu1 = new MainMenu();
+		menu2 = new MainMenu();
 		this.addMouseListener(new mouseInput());
 	}
 	
