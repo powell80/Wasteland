@@ -17,10 +17,10 @@ public class Game extends Canvas implements Runnable
 	public static int dialogBool=0;
 	public Thread gameThread;
 	public static  JFrame frame;
+	public MainMenu mMenu;
 	public CurrentMenu currMenu;
-	public MainMenu menu;
-	public MainMenu menu1;
-	public MainMenu menu2;
+	public CurrentMouseListen currMouse;
+	
 	
 	public static enum STATE
 	{
@@ -33,10 +33,9 @@ public class Game extends Canvas implements Runnable
 
 	public void init()
 	{
-		menu = new MainMenu();
-		menu1 = new MainMenu();
-		menu2 = new MainMenu();
-		this.addMouseListener(new mouseInput());
+		mMenu = new MainMenu();
+		currMenu = mMenu;
+		//this.addMouseListener(new MmMouseInput());
 	}
 	
 	public synchronized void start()
@@ -84,7 +83,8 @@ public class Game extends Canvas implements Runnable
 	{
 		if(state == STATE.MENU)
 		{
-			menu.tick();
+			this.addMouseListener(new MmMouseInput());
+			currMenu.tick();
 		}
 		else if(state == STATE.GAME)
 		{
@@ -106,7 +106,7 @@ public class Game extends Canvas implements Runnable
 		g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 		if(state == STATE.MENU)
 		{
-			menu.render(g);
+			currMenu.render(g);
 		}
 		else if(state == STATE.GAME)
 		{

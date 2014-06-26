@@ -5,11 +5,15 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import main.CurrentMenu;
 import main.Game;
+import main.MmMouseInput;
+import main.Game.STATE;
 
-public class MainMenu implements CurrentMenu
+public class MainMenu implements CurrentMenu, MouseListener
 {
 	public Rectangle button0 = new Rectangle(Game.WIDTH / 2 + 120, 150, 200, 50);
 	public Rectangle button1 = new Rectangle(Game.WIDTH / 2 + 120, 225, 200, 50);
@@ -18,10 +22,14 @@ public class MainMenu implements CurrentMenu
 	public Rectangle button4 = new Rectangle(Game.WIDTH / 2 + 120, 450, 200, 50);
 	public Rectangle button5 = new Rectangle(Game.WIDTH / 2 + 120, 525, 200, 50);
 	
-	
-	public void tick()
+	public MainMenu()
 	{
 		
+	}
+
+	public void tick()
+	{
+
 	}
 	
 	public void render(Graphics g)
@@ -53,5 +61,35 @@ public class MainMenu implements CurrentMenu
 		
 		g2d.draw(button5);
 		g.drawString("Quit", button4.x + 65, button5.y + 35);
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) 
+	{
+	
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
