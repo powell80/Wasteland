@@ -60,9 +60,6 @@ public class MainMenu implements CurrentMenu, MouseListener
 		g.drawString("button4", button4.x + 25, button4.y + 35);
 		
 		g2d.draw(button5);
-
-		g.drawString("Quit", button5.x + 65, button5.y + 35);
-
 		g.drawString("Exit", button5.x + 65, button5.y + 35);
 
 	}
