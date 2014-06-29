@@ -13,7 +13,7 @@ import main.Game;
 import main.MmMouseInput;
 import main.Game.STATE;
 
-public class MainMenu implements CurrentMenu, MouseListener
+public class MainMenu implements CurrentMenu
 {
 	public Rectangle button0 = new Rectangle(Game.WIDTH / 2 + 120, 150, 200, 50);
 	public Rectangle button1 = new Rectangle(Game.WIDTH / 2 + 120, 225, 200, 50);
@@ -61,36 +61,6 @@ public class MainMenu implements CurrentMenu, MouseListener
 		
 		g2d.draw(button5);
 		g.drawString("Exit", button5.x + 65, button5.y + 35);
-
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) 
-	{
-	
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 }

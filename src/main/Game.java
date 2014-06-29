@@ -35,7 +35,7 @@ public class Game extends Canvas implements Runnable
 	{
 		mMenu = new MainMenu();
 		currMenu = mMenu;
-		//this.addMouseListener(new MmMouseInput());
+		this.addMouseListener(new MmMouseInput());
 	}
 	
 	public synchronized void start()
@@ -83,7 +83,7 @@ public class Game extends Canvas implements Runnable
 	{
 		if(state == STATE.MENU)
 		{
-			this.addMouseListener(new MmMouseInput());
+			
 			currMenu.tick();
 		}
 		else if(state == STATE.GAME)
