@@ -80,15 +80,6 @@ public class MmMouseInput implements MouseListener, CurrentMouseListen
 			if(my >= 450 && my <= 500)
 			{
 				//pressed play button
-				Game.state = STATE.GAME;
-			}
-		}
-		//button5 button test
-		if(mx >= Game.WIDTH / 2 + 120 && mx <= Game.WIDTH /2 + 320)
-		{
-			if(my >= 525 && my <= 575)
-			{
-				//pressed play button
 				System.exit(1);
 			}
 		}

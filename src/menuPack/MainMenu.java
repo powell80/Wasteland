@@ -20,7 +20,6 @@ public class MainMenu implements CurrentMenu
 	public Rectangle button2 = new Rectangle(Game.WIDTH / 2 + 120, 300, 275, 50);
 	public Rectangle button3 = new Rectangle(Game.WIDTH / 2 + 120, 375, 275, 50);
 	public Rectangle button4 = new Rectangle(Game.WIDTH / 2 + 120, 450, 275, 50);
-	public Rectangle button5 = new Rectangle(Game.WIDTH / 2 + 120, 525, 275, 50);
 	
 	public MainMenu()
 	{
@@ -29,7 +28,7 @@ public class MainMenu implements CurrentMenu
 
 	public void tick()
 	{
-
+		
 	}
 	
 	public void render(Graphics g)
@@ -39,7 +38,7 @@ public class MainMenu implements CurrentMenu
 		Font fnt0 = new Font("arial", Font.BOLD, 50);
 		g.setFont(fnt0);
 		g.setColor(Color.white);
-		g.drawString("WASTELAND", Game.WIDTH / 2, 100);
+		g.drawString("WASTELAND", Game.WIDTH / 2 + 98, 100);
 		
 		Font fnt1 = new Font("arial", Font.BOLD, 30);
 		g.setFont(fnt1);
@@ -57,10 +56,7 @@ public class MainMenu implements CurrentMenu
 		g.drawString("Settings", button3.x + 25, button3.y + 35);
 		
 		g2d.draw(button4);
-		g.drawString("button4", button4.x + 25, button4.y + 35);
-		
-		g2d.draw(button5);
-		g.drawString("Exit", button5.x + 25, button5.y + 35);
+		g.drawString("Exit", button4.x + 25, button4.y + 35);
 		
 	}
 }
