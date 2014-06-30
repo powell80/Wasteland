@@ -58,5 +58,7 @@ public class MainMenu implements CurrentMenu
 		g2d.draw(button4);
 		g.drawString("Exit", button4.x + 25, button4.y + 35);
 		
+		
+		
 	}
 }

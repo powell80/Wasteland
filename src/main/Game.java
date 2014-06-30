@@ -1,11 +1,13 @@
 package main;
 
 import gamePack.gtx.Background;
+import gamePack.gtx.ImageLoader;
 
 import java.awt.Canvas;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
@@ -20,9 +22,12 @@ public class Game extends Canvas implements Runnable
 	public Thread gameThread;
 	public static  JFrame frame;
 	public MainMenu mMenu;
+	public ImageLoader loader;
 	public CurrentMenu currMenu;
 	public CurrentMouseListen currMouse;
-	public Background back;
+	private Background mMenuBack;
+	
+	public static BufferedImage background1;
 	
 	
 	public static enum STATE
@@ -36,10 +41,14 @@ public class Game extends Canvas implements Runnable
 
 	public void init()
 	{
+		ImageLoader loader = new ImageLoader();
 		mMenu = new MainMenu();
 		currMenu = mMenu;
-		//mMBack = newBackground();
+		background1 = loader.load("/mMenuBack.png");
 		this.addMouseListener(new MmMouseInput());
+		
+		mMenuBack = new Background(background1);
+		
 	}
 	
 	public synchronized void start()
@@ -87,8 +96,8 @@ public class Game extends Canvas implements Runnable
 	{
 		if(state == STATE.MENU)
 		{
-			
 			currMenu.tick();
+			
 		}
 		else if(state == STATE.GAME)
 		{
@@ -110,7 +119,9 @@ public class Game extends Canvas implements Runnable
 		g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 		if(state == STATE.MENU)
 		{
+			mMenuBack.render(g);
 			currMenu.render(g);
+			
 		}
 		else if(state == STATE.GAME)
 		{
