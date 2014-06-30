@@ -15,12 +15,12 @@ import main.Game.STATE;
 
 public class MainMenu implements CurrentMenu
 {
-	public Rectangle button0 = new Rectangle(Game.WIDTH / 2 + 120, 150, 200, 50);
-	public Rectangle button1 = new Rectangle(Game.WIDTH / 2 + 120, 225, 200, 50);
-	public Rectangle button2 = new Rectangle(Game.WIDTH / 2 + 120, 300, 200, 50);
-	public Rectangle button3 = new Rectangle(Game.WIDTH / 2 + 120, 375, 200, 50);
-	public Rectangle button4 = new Rectangle(Game.WIDTH / 2 + 120, 450, 200, 50);
-	public Rectangle button5 = new Rectangle(Game.WIDTH / 2 + 120, 525, 200, 50);
+	public Rectangle button0 = new Rectangle(Game.WIDTH / 2 + 120, 150, 275, 50);
+	public Rectangle button1 = new Rectangle(Game.WIDTH / 2 + 120, 225, 275, 50);
+	public Rectangle button2 = new Rectangle(Game.WIDTH / 2 + 120, 300, 275, 50);
+	public Rectangle button3 = new Rectangle(Game.WIDTH / 2 + 120, 375, 275, 50);
+	public Rectangle button4 = new Rectangle(Game.WIDTH / 2 + 120, 450, 275, 50);
+	public Rectangle button5 = new Rectangle(Game.WIDTH / 2 + 120, 525, 275, 50);
 	
 	public MainMenu()
 	{
@@ -45,22 +45,22 @@ public class MainMenu implements CurrentMenu
 		g.setFont(fnt1);
 		
 		g2d.draw(button0);
-		g.drawString("button0", button0.x + 25, button0.y + 35);
+		g.drawString("Join Game", button0.x + 25, button0.y + 35);
 		
 		g2d.draw(button1);
-		g.drawString("button1", button1.x + 25, button1.y + 35);
+		g.drawString("Host Game", button1.x + 25, button1.y + 35);
 		
 		g2d.draw(button2);
-		g.drawString("button2", button2.x + 25, button2.y + 35);
+		g.drawString("Select Character", button2.x + 25, button2.y + 35);
 		
 		g2d.draw(button3);
-		g.drawString("button3", button3.x + 25, button3.y + 35);
+		g.drawString("Settings", button3.x + 25, button3.y + 35);
 		
 		g2d.draw(button4);
 		g.drawString("button4", button4.x + 25, button4.y + 35);
 		
 		g2d.draw(button5);
-		g.drawString("Exit", button5.x + 65, button5.y + 35);
+		g.drawString("Exit", button5.x + 25, button5.y + 35);
 		
 	}
 }
