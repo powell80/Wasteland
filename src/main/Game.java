@@ -38,6 +38,7 @@ public class Game extends Canvas implements Runnable
 	{
 		mMenu = new MainMenu();
 		currMenu = mMenu;
+		//mMBack = newBackground();
 		this.addMouseListener(new MmMouseInput());
 	}
 	
