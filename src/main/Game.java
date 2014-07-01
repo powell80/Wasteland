@@ -9,6 +9,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import menuPack.MainMenu;
@@ -21,6 +22,7 @@ public class Game extends Canvas implements Runnable
 	public static int dialogBool=0;
 	public Thread gameThread;
 	public static  JFrame frame;
+	static ImageIcon ico = new ImageIcon("res//icon.png");
 	public MainMenu mMenu;
 	public ImageLoader loader;
 	public CurrentMenu currMenu;
@@ -144,6 +146,7 @@ public class Game extends Canvas implements Runnable
 		frame.setBounds(400, 100, WIDTH * SCALE, HEIGHT * SCALE);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
+		frame.setIconImage(ico.getImage());
 		frame.add(game);
 		frame.setVisible(true);
 		game.start();

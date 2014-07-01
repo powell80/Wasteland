@@ -37,7 +37,7 @@ public class MainMenu implements CurrentMenu
 		
 		Font fnt0 = new Font("arial", Font.BOLD, 50);
 		g.setFont(fnt0);
-		g.setColor(Color.green);
+		g.setColor(Color.black);
 		g.drawString("WASTELAND", Game.WIDTH / 2 + 98, 100);
 		
 		Font fnt1 = new Font("arial", Font.BOLD, 30);
