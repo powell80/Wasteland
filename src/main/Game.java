@@ -25,9 +25,11 @@ public class Game extends Canvas implements Runnable
 	static ImageIcon ico = new ImageIcon("res//icon.png");
 	public MainMenu mMenu;
 	public ImageLoader loader;
-	public CurrentMenu currMenu;
+	public static CurrentMenu currMenu;
 	public CurrentMouseListen currMouse;
 	private Background mMenuBack;
+	public static boolean btn0Click, btn1Click,btn2Click, btn3Click, 
+	btn4Click;
 	
 	public static BufferedImage background1;
 	
@@ -47,7 +49,7 @@ public class Game extends Canvas implements Runnable
 		mMenu = new MainMenu();
 		currMenu = mMenu;
 		background1 = loader.load("/mMenuBack.png");
-		this.addMouseListener(new MmMouseInput());
+		this.addMouseListener(new MenuMouseInput());
 		
 		mMenuBack = new Background(background1);
 		

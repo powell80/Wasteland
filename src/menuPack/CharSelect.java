@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 public class CharSelect 
 {
+	
 	public CharSelect()
 	{
 		

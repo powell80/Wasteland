@@ -10,7 +10,7 @@ import java.awt.event.MouseListener;
 
 import main.CurrentMenu;
 import main.Game;
-import main.MmMouseInput;
+import main.MenuMouseInput;
 import main.Game.STATE;
 
 public class MainMenu implements CurrentMenu
@@ -20,6 +20,7 @@ public class MainMenu implements CurrentMenu
 	public Rectangle button2 = new Rectangle(Game.WIDTH / 2 + 120, 300, 275, 50);
 	public Rectangle button3 = new Rectangle(Game.WIDTH / 2 + 120, 375, 275, 50);
 	public Rectangle button4 = new Rectangle(Game.WIDTH / 2 + 120, 450, 275, 50);
+
 	
 	public MainMenu()
 	{
@@ -28,7 +29,26 @@ public class MainMenu implements CurrentMenu
 
 	public void tick()
 	{
-		
+		if(Game.btn0Click == true)
+		{
+			
+		}
+		if(Game.btn1Click == true)
+		{
+			
+		}
+		if(Game.btn2Click == true)
+		{
+			
+		}
+		if(Game.btn3Click == true)
+		{
+			
+		}
+		if(Game.btn4Click == true)
+		{
+			 System.exit(1);
+		}
 	}
 	
 	public void render(Graphics g)
