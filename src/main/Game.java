@@ -28,8 +28,7 @@ public class Game extends Canvas implements Runnable
 	public static CurrentMenu currMenu;
 	public CurrentMouseListen currMouse;
 	private Background mMenuBack;
-	public static boolean btn0Click, btn1Click,btn2Click, btn3Click, 
-	btn4Click;
+	public static boolean btn0Click, btn1Click, btn2Click, btn3Click, btn4Click;
 	
 	public static BufferedImage background1;
 	
